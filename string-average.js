@@ -9,15 +9,10 @@ function stringAverage(str) {
     // split string into array
     let ary =  str.split(" ");
 
-    // convert array values into number
-    for(let i = 0; i < ary.length; i++) {
-        ary[i] = mapStringToNumber(ary[i]);
-    }
-
     // find the sum of array values
     let sum = 0;
-    for( let i = 0; i < ary.length; i++ ){
-        sum += parseInt( ary[i], 10 ); //don't forget to add the base
+    for(let i = 0; i < ary.length; i++) {
+        sum += parseInt(mapStringToNumber(ary[i]), 10);
     }
 
     // find the floored average number
